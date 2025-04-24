@@ -4,40 +4,40 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PMS {
-    private List<Employee> employeeList = new ArrayList<>();
+    private List<Project> projectList = new ArrayList<>();
 
-    public void addEmployee(Employee employee) {
-        employeeList.add(employee);
+    public void addProject(Project project) {
+        projectList.add(project);
     }
 
-    public boolean removeEmployee(Employee employee) {
-        for (int i = 0; i < employeeList.size(); i++) {
-            Employee e = employeeList.get(i);
-            if (e.getEmployeeName() != null && e.getEmployeeName().equals(employee.getEmployeeName())
-                    && e.getSalary() == employee.getSalary()) {
-                employeeList.remove(i);
+    public boolean removeProject(Project project) {
+        for (int i = 0; i < projectList.size(); i++) {
+            Project p = projectList.get(i);
+            if (p.getProjectName() != null && p.getProjectName().equals(project.getProjectName())
+                    && p.getPrice() == project.getPrice()) {
+                projectList.remove(i);
                 return true;
             }
         }
         return false;
     }
 
-    public void printEmployees() {
-        if (employeeList.isEmpty()) {
-            System.out.println("No employees found.");
+    public void printProjects() {
+        if (projectList.isEmpty()) {
+            System.out.println("No projects found.");
         } else {
-            for (Employee e : employeeList) {
-                System.out.println(e.getEmployeeName() + ", $" + e.getSalary() + ", Started on: " + e.getStartedWorking());
+            for (Project p : projectList) {
+                System.out.println(p.getProjectName() + ", Price: $" + p.getPrice() + ", Started on: " + p.getStartedWorking());
                 System.out.println();
             }
         }
     }
 
-    public boolean modifyEmployee(Employee target, Employee updated) {
-        for (Employee current : employeeList) {
-            if (current.getEmployeeName().equals(target.getEmployeeName()) && current.getSalary() == target.getSalary()) {
-                current.setEmployeeName(updated.getEmployeeName());
-                current.setSalary(updated.getSalary());
+    public boolean modifyProject(Project target, Project updated) {
+        for (Project current : projectList) {
+            if (current.getProjectName().equals(target.getProjectName()) && current.getPrice() == target.getPrice()) {
+                current.setProjectName(updated.getProjectName());
+                current.setPrice(updated.getPrice());
                 current.setStartedWorking(updated.getStartedWorking());
                 return true;
             }
@@ -45,10 +45,10 @@ public class PMS {
         return false;
     }
 
-    public boolean modifyEmployeeSalary(String employeeName, int newSalary) {
-        for (Employee current : employeeList) {
-            if (current.getEmployeeName().equals(employeeName)) {
-                current.setSalary(newSalary);
+    public boolean modifyProjectPrice(String projectName, int newPrice) {
+        for (Project current : projectList) {
+            if (current.getProjectName().equals(projectName)) {
+                current.setPrice(newPrice);
                 return true;
             }
         }
