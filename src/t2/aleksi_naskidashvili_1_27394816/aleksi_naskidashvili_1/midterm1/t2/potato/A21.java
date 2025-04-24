@@ -1,4 +1,4 @@
-package t2.sub.potato;
+package t2.aleksi_naskidashvili_1_27394816.aleksi_naskidashvili_1.midterm1.t2.potato;
 
 public class A21 {
     private int width = 23;

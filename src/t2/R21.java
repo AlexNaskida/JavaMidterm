@@ -1,7 +1,7 @@
 package t2;
 
-import t2.sub.potato.A21;
-import t2.sub.peeler.ensemble.A22;
+import t2.aleksi_naskidashvili_1_27394816.aleksi_naskidashvili_1.midterm1.t2.potato.A21;
+import t2.aleksi_naskidashvili_1_27394816.aleksi_naskidashvili_1.midterm1.t2.peeler.A22;
 
 /**
  * R21 calculates the area of a rectangle using A21,
