@@ -10,4 +10,4 @@ The AI helped mainly with writing and explaining the code structure and maintain
 
 ### 3. Describe the cases where you have tried AI, but without desired result. (1 point).
 
- I can't recall such a moment. Everything was smooth and clean. 
+ I can't recall such a moment, since I didn't encounter any issues. Everything was smooth and clean. 
